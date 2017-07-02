@@ -1,10 +1,25 @@
+
+
 <template>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" v-for="grade in grades">
-        <div class='well'>
-            <p class="lead" @click="disp(grade)"> Grade {{grade.grade}}</p>
-        </div>
+    <div class="col-md-12">
+        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <thead>
+                <tr>
+                    <th>Surname</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr v-for="grade in grades">
+                <td>{{grade.grade}}</td>
+                <td>Good</td>
+                <td>Bad</td>
+              </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -22,7 +37,8 @@ export default {
     mounted() {
         axios.get('/grades').then(response => {
                 this.grades = response.data, console.log(response.data)
-            }),
+        }),
+        $('#dataTables-example').DataTable({responsive:true}),
             console.log('Component mounted.')
     },
     methods: {
