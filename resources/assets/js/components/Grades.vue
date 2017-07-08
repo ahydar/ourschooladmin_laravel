@@ -34,12 +34,13 @@ export default {
             grades: []
         }
     },
-    mounted() {
+    created() {
         axios.get('/grades').then(response => {
-                this.grades = response.data, console.log(response.data)
+                this.grades = response.data,
+                console.log(response.data)
         }),
         $('#dataTables-example').DataTable({responsive:true}),
-            console.log('Component mounted.')
+        console.log('Component mounted.')
     },
     methods: {
         disp: function(grade) {

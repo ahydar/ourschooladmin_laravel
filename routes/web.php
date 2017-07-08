@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/durandal', function () {
+    return view('durandal');
+});
 
 Route::get('/index', function () {
     return view('index');
@@ -24,5 +27,7 @@ Route::get('/first', function () {
     return view('sections.first');
 });
 
-
+//Handling grades and cards
 Route::get('/grades','GradeController@index');
+Route::get('/grade/manage/{grade}','GradeController@manage');
+Route::post('/grade/{grade}/class','ClassesController@addClass');

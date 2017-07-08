@@ -20,6 +20,13 @@ window.dt = require( 'datatables.net' );
 window.bs = require( 'datatables.net-bs' );
 window.responsive = require( 'datatables.net-responsive' );
 
+/*
+* Add Alertifyjs librarary. Allows for beautiful alert messages
+*
+*/
+
+window.alertifyjs = require( 'alertifyjs' );
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
