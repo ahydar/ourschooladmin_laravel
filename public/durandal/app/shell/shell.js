@@ -9,9 +9,10 @@
         activate: function () {
             router.map([
                 { route: '', title:'Welcome', moduleId: 'welcome/welcome', nav: true },
-                { route: 'flickr', moduleId: 'flicker/flickr', nav: true }
+                { route: 'flickr', moduleId: 'flicker/flickr', nav: true },
+                { route: 'test', moduleId: 'test/test', nav: true }
             ]).buildNavigationModel();
-            
+
             return router.activate();
         }
     };

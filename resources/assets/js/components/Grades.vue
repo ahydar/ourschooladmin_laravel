@@ -1,5 +1,3 @@
-
-
 <template>
 
 <div class="row">
@@ -38,9 +36,11 @@ export default {
         axios.get('/grades').then(response => {
                 this.grades = response.data,
                 console.log(response.data)
-        }),
-        $('#dataTables-example').DataTable({responsive:true}),
-        console.log('Component mounted.')
+        })
+    },
+    updated(){
+      $('#dataTables-example').DataTable({responsive:true}),
+      console.log('Component activated.')
     },
     methods: {
         disp: function(grade) {

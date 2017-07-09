@@ -12,9 +12,11 @@ try {
 
     require('bootstrap-sass');
 } catch (e) {}
+
 /*
-* Well add datatables to the app
+*Well add datatables to the app
 */
+
 
 window.dt = require( 'datatables.net' );
 window.bs = require( 'datatables.net-bs' );

@@ -10,15 +10,18 @@
         <meta name="format-detection" content="telephone=no"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="apple-touch-startup-image" href="/public/lib/durandal/img/ios-startup-image-landscape.png" media="(orientation:landscape)" />
-        <link rel="apple-touch-startup-image" href="/public/lib/durandal/img/ios-startup-image-portrait.png" media="(orientation:portrait)" />
-        <link rel="apple-touch-icon" href="/public/lib/durandal/img/icon.png"/>
+        <!--STYLES-->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="apple-touch-startup-image" href="{{asset('durandal/lib/durandal/img/ios-startup-image-landscape.png')}}" media="(orientation:landscape)" />
+        <link rel="apple-touch-startup-image" href="{{asset('durandal/lib/durandal/img/ios-startup-image-portrait.png')}}" media="(orientation:portrait)" />
+        <link rel="apple-touch-icon" href="{{asset('durandal/lib/durandal/img/icon.png')}}"/>
 
-        <link rel="stylesheet" href="/public/lib/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/public/css/ie10mobile.css" />
-        <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="/public/lib/durandal/css/durandal.css" />
-        <link rel="stylesheet" href="/public/css/starterkit.css" />
+
+        <link rel="stylesheet" href="{{asset('durandal/css/ie10mobile.css')}}" />
+        <link rel="stylesheet" href="{{asset('durandal/lib/font-awesome/css/font-awesome.min.css')}}" />
+        <link rel="stylesheet" href="{{asset('durandal/lib/durandal/css/durandal.css')}}" />
+        <link rel="stylesheet" href="{{asset('durandal/css/starterkit.css')}}" />
+        <!--STYLES-->
 
         <script type="text/javascript">
             if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -39,6 +42,8 @@
             </div>
         </div>
 
-        <script src="/public/lib/require/require.js" data-main="app/main"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{asset('durandal/lib/require/require.js')}}" data-main="{{asset('durandal/app/main')}}"></script>
+
     </body>
 </html>

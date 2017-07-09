@@ -14,8 +14,8 @@ class GradeController extends Controller
       foreach($grades as $grade){
         $grade -> classes;
       }
-      //return $grades;
-      return view('grades.show',compact('grades'));
+      return $grades;
+      //return view('grades.show',compact('grades'));
     }
 
 

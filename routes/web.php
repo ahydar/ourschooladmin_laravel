@@ -19,6 +19,10 @@ Route::get('/durandal', function () {
     return view('durandal');
 });
 
+Route::get('/test', function () {
+    return view('durandal');
+});
+
 Route::get('/index', function () {
     return view('index');
 });
