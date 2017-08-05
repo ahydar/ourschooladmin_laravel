@@ -29,6 +29,12 @@ window.responsive = require( 'datatables.net-responsive' );
 
 window.alertifyjs = require( 'alertifyjs' );
 
+/*
+* Add Kendo-ui core
+*/
+
+window.kendo = require( 'kendo-ui-core' );
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
