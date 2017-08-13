@@ -20,7 +20,7 @@ Route::get('/durandal', function () {
 });
 
 Route::get('/test', function () {
-    return view('durandal');
+    $excel = App::make('excel');
 });
 
 Route::get('/index', function () {
@@ -35,3 +35,7 @@ Route::get('/first', function () {
 Route::get('/grades','GradeController@index');
 Route::get('/grade/manage/{grade}','GradeController@manage');
 Route::post('/grade/{grade}/class','ClassesController@addClass');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
