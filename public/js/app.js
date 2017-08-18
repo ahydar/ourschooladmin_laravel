@@ -26457,14 +26457,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         axios.get('/grades').then(function (response) {
-            _this.grades = response.data, console.log(response.data);
-        }), $('#dataTables-example').DataTable({ responsive: true }), console.log('Component mounted.');
+            _this.grades = response.data, console.log(response.data), $('#dataTables-example').DataTable({ responsive: true }), console.log('Initialize table');
+        }), console.log('Component mounted.');
     },
 
     methods: {
-        disp: function disp(grade) {
-            console.log(grade.classes);
-        }
+        disp: function disp(grade) {}
     }
 });
 
@@ -47736,7 +47734,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "dataTables-example"
     }
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.grades), function(grade) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(grade.grade))]), _vm._v(" "), _c('td', [_vm._v("Good")]), _vm._v(" "), _c('td', [_vm._v("Bad")])])
+    return _c('tr', [_c('td', [_vm._v(_vm._s(grade.gradeName))]), _vm._v(" "), _c('td', [_vm._v("Good")]), _vm._v(" "), _c('td', [_vm._v("Bad")])])
   }))])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('thead', [_c('tr', [_c('th', [_vm._v("Surname")]), _vm._v(" "), _c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Username")])])])

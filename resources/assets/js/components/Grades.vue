@@ -14,7 +14,7 @@
             </thead>
             <tbody>
               <tr v-for="grade in grades">
-                <td>{{grade.grade}}</td>
+                <td>{{grade.gradeName}}</td>
                 <td>Good</td>
                 <td>Bad</td>
               </tr>
@@ -36,14 +36,15 @@ export default {
     },
     mounted() {
         axios.get('/grades').then(response => {
-                this.grades = response.data, console.log(response.data)
+                this.grades = response.data,
+                console.log(response.data),
+                $('#dataTables-example').DataTable({responsive:true}),
+                console.log('Initialize table')
         }),
-        $('#dataTables-example').DataTable({responsive:true}),
-            console.log('Component mounted.')
+        console.log('Component mounted.')
     },
     methods: {
         disp: function(grade) {
-            console.log(grade.classes);
         }
     }
 }
