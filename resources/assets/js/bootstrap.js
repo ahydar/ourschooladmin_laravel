@@ -17,6 +17,7 @@ try {
 */
 
 window.dt = require( 'datatables.net' );
+window.bs = require( 'datatables.net-bs' );
 window.responsive = require( 'datatables.net-responsive' );
 
 /**
